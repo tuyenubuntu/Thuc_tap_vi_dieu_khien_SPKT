@@ -1,0 +1,38 @@
+[PROJECT]
+Target=BAI_308_SANGDAN_SANGDICH_2x16LED.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_308_SANGDAN_SANGDICH_2x16LED.c
+[BAI_308_SANGDAN_SANGDICH_2x16LED.c]
+Type=4
+[mru-list]
+1=BAI_308_SANGDAN_SANGDICH_2x16LED.c
+
+[defines]
+buildcount=2
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=4
+D1_L1=[37175]Stopped Editing.
+TotalEdit=8
+TotalDebug=0
+D1_E=8
+D1_D=0
+D1_L2=[37234]Started Editing.
+D1_L3=[37258]Stopped Editing.
+D1_L4=[37488]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=BAI_308_SANGDAN_SANGDICH_2x16LED.c
+t1=2
+Count=1
+[Units]
+Count=1
+1=BAI_308_SANGDAN_SANGDICH_2x16LED (main)

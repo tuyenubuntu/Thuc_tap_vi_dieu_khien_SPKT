@@ -1,0 +1,64 @@
+
+ROM used:   1192/131072 (1%)
+            1192/131072 (1%) including unused fragments
+
+            0.3 Average locations per line
+            2.2 Average locations per statement
+
+RAM used:   36/3936 (1%) at main() level
+            56/3936 (1%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  126    74  14  BAI_310_TONGHOP_32LED.c
+   32     0   0  tv_boards.c
+  137   121  22  TV_MOPHONG.C
+  104     0   0  TV_MOPHONG.h
+  953     0   0  ..\..\Program Files (x86)\PICC\Devices\18f6722.h
+ 2228   258  48  ..\..\Program Files (x86)\PICC\Drivers\math.h
+  180    86  16  TV_LOWLEVER.C
+    7     0   0  TV_LOWLEVER.H
+----- -----
+ 3767   539 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     42   2    1             @delay_ms1
+0     54   2    0    221  2.6  led32_display
+0    102   4    0    452  2.8  d7seg_display
+0     98   4    2    301  5.1  s7seg_display
+0     12   1    0     30  1.0  buzzer_off
+0     12   1    0     30  1.0  triac_2_off
+0     62   3    0    394  3.2  system_init
+0     90   4    4    457  6.6  CHECK_MODULE
+0     30   1    0    140  3.9  led_flash
+0    136   6    1    402  5.6  on_off_r2l
+0    136   6    1    402  5.6  on_off_l2r
+0    160   7    0    589  6.7  on_off_fo
+0    160   7    0    589  6.7  on_off_fi
+0     94   4    0    107  1.4  MAIN
+ Inline         0    417  5.6  @cinit1
+
+Program metrics:
+    Functions               14
+    Statements              539
+    Comments                444
+    Volume (V)              7560
+    Difficulty (D)          58.5
+    Effort to implement (E) 442285
+    Time to implement (T)   6 hours, 50 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   16
+    Maintainability (MI)    111
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-0FFFE  1188  64344  
+10000-1FFFE     0  65536  
+
+
+

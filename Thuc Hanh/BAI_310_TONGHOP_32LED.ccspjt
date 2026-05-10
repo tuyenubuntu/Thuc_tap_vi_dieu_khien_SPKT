@@ -1,0 +1,64 @@
+[PROJECT]
+Target=BAI_310_TONGHOP_32LED.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_310_TONGHOP_32LED.c
+[BAI_310_TONGHOP_32LED.c]
+Type=4
+[mru-list]
+1=BAI_310_TONGHOP_32LED.c
+
+[defines]
+buildcount=14
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=28
+D1_L1=[39625]Stopped Editing.
+TotalEdit=81
+TotalDebug=0
+D1_E=81
+D1_D=0
+D1_L2=[40137]Started Editing.
+D1_L3=[40327]Stopped Editing.
+D1_L4=[41148]Started Editing.
+D1_L5=[41570]Stopped Editing.
+D1_L6=[41700]Started Editing.
+D1_L7=[41749]Stopped Editing.
+D1_L8=[41839]Started Editing.
+D1_L9=[41999]Stopped Editing.
+D1_L10=[42097]Started Editing.
+D1_L11=[42563]Stopped Editing.
+D1_L12=[42616]Started Editing.
+D1_L13=[43140]Stopped Editing.
+D1_L14=[43225]Started Editing.
+D1_L15=[43234]Stopped Editing.
+D1_L16=[43252]Started Editing.
+D1_L17=[43299]Project Closed.
+D1_L18=[47584]Project Opened.
+D1_L19=[47611]Started Editing.
+D1_L20=[48356]Stopped Editing.
+D1_L21=[48361]Project Closed.
+D1_L22=[67163]Project Opened.
+D1_L23=[67215]Started Editing.
+D1_L24=[68154]Stopped Editing.
+D1_L25=[68256]Started Editing.
+D1_L26=[68268]Stopped Editing.
+D1_L27=[68281]Started Editing.
+D1_L28=[68449]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=BAI_313_TONGHOP_32LED.c
+t1=112
+Count=2
+2=BAI_310_TONGHOP_32LED.c
+t2=112
+[Units]
+Count=1
+1=BAI_310_TONGHOP_32LED (main)

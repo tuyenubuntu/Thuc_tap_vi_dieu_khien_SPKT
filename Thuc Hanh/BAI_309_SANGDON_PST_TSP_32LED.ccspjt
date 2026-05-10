@@ -1,0 +1,39 @@
+[PROJECT]
+Target=BAI_309_SANGDON_PST_TSP_32LED.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_309_SANGDON_PST_TSP_32LED.c
+[BAI_309_SANGDON_PST_TSP_32LED.c]
+Type=4
+[mru-list]
+1=BAI_309_SANGDON_PST_TSP_32LED.c
+
+[defines]
+buildcount=2
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=5
+D1_L1=[38455]Stopped Editing.
+TotalEdit=12
+TotalDebug=0
+D1_E=12
+D1_D=0
+D1_L2=[38490]Started Editing.
+D1_L3=[38498]Stopped Editing.
+D1_L4=[38586]Started Editing.
+D1_L5=[38628]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=BAI_309_SANGDON_PST_TSP_32LED.c
+t1=1
+Count=1
+[Units]
+Count=1
+1=BAI_309_SANGDON_PST_TSP_32LED (main)

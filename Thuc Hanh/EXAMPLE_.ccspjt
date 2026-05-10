@@ -1,0 +1,38 @@
+[PROJECT]
+Target=EXAMPLE_.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=EXAMPLE_.c
+[EXAMPLE_.c]
+Type=4
+[mru-list]
+1=EXAMPLE_.c
+
+[defines]
+buildcount=2
+
+[Opened Files]
+1=EXAMPLE_.c
+t1=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=4
+D1_L1=[33839]Stopped Editing.
+TotalEdit=10
+TotalDebug=0
+D1_E=10
+D1_D=0
+D1_L2=[33848]Started Editing.
+D1_L3=[33868]Stopped Editing.
+D1_L4=[33927]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=EXAMPLE_ (main)

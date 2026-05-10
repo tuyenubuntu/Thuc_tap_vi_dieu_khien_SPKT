@@ -1,0 +1,114 @@
+//!#define   board    D501     // Co dong nay thi chay that. Bo dong nay thi mo phong
+#include<tv_boards.c>
+#include <stdbool.h>
+unsigned int8 n=0, count = 0;
+bool mode = false, full = false;
+
+void modes()
+{
+   if (inputcd (CLR) == 0) 
+   {
+      led32.ledx16[0] = 0;
+      led32_display();
+      count = 0; full = false; 
+      
+      delay_ms(1000);
+      if (inputcd (CLR) == 0) 
+      {
+         mode = ~mode;
+         
+         if (mode==1)
+         {
+            for (n =0 ; n <10; n++)
+            {
+               led32.ledx16[0] = ~led32.ledx16[0];
+               led32_display();
+               delay_ms (500);
+            }
+         }
+      }
+      else
+      {
+         mode = mode;
+      }
+   }
+}
+
+void on_PST ()
+{
+      if((inputcd (UP) == 0) && mode==0)
+      {
+         led32.ledx16[0] = ~(0xffff  << count);
+         led32_display();
+         delay_ms(100);
+         count ++;
+         if (count == 16)
+         {
+            count = 16;
+         }
+      }
+      
+      if((inputcd (UP) == 0) && mode==1)
+      {
+         for (n = 0; n <=16; n++)
+         {
+            led32.ledx16[0] = ~(0xffff  << n);
+            led32_display();
+            delay_ms(100);
+            if (n==16)
+            {
+               full = true;
+            }
+         }
+      }
+}
+
+void off_TSP ()
+{  
+      if((inputcd (DW) == 0) && count > 0 && mode==false)
+      {
+         count = count - 1;
+         led32.ledx16[0] = ~(0xffff << (count));
+         led32_display();
+         delay_ms(100);
+         if (count == 0)
+         {
+            count = 0;
+         }
+      }
+
+      if((inputcd (DW) == 0) && mode==true)
+      {
+         for (n = 0; n <=16; n++)
+         {
+            led32.ledx16[0] = (0xffff >> n);
+            led32_display();
+            delay_ms(100);
+            if (n==16)
+            {
+               full = false;
+            }
+         }
+      }
+}
+
+void main ()
+{
+      system_init();  // Bien dich thanh cong - Go 2-3 chu dau - roi nhan Ctr + Khoang trang
+      led32.ledx16[0] = 0;
+      while (true)
+      {
+         if (0 <= count <=16) 
+         {
+            on_PST ();
+            off_TSP ();
+            modes ();
+          }
+          else if (count > 16)
+          {
+            count=16;
+          }
+      }
+}
+
+

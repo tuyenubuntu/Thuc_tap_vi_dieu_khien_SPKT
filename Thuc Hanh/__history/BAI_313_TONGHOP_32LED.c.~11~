@@ -1,0 +1,194 @@
+//!#define   board    D501     // Co dong nay thi chay that. Bo dong nay thi mo phong
+#include<tv_boards.c>
+unsigned int8 n, trst=0, m;
+
+void led_flash ()
+{
+      // 1. Dieu khien 32 LED chop tat 5 lan
+      n=0;
+      if (n < 10)
+      {
+            led32.ledx32 =~ led32.ledx32;
+            led32_display();
+            delay_ms(100);
+      }
+      else
+      {
+         n=0;
+         trst++;
+      }
+}
+
+
+void on_r2l ()
+{
+      // Bat tu phai sang trai
+      if (n <= 32)
+      {
+         led32.ledx32 =~ (0xffffffff  << n); 
+         led32_display();
+         delay_ms(100);
+         n++;
+      }
+      
+      else
+      {
+      n = 0;
+      trst++;
+      }
+}
+      
+Void off_r2l ()
+{
+      // Tat tu phai sang tra
+      if (n <= 32) 
+      {
+         led32.ledx32 = (0xffffffff  << n); 
+         led32_display();
+         delay_ms(100);
+         n++;
+      }
+      
+      else
+      {
+      n = 0;
+      trst++;
+      }
+
+}
+
+
+void on_l2r ()
+{
+      //Bat tu trai sang phai
+      if (n <= 32)
+      {
+         led32.ledx32 =~ (0xffffffff  >> n); 
+         led32_display();
+         delay_ms(100);
+         n++;
+      }
+      
+      else
+      {
+      n = 0;
+      trst++;
+      }
+}
+
+void off_l2r ()
+{
+      //Tat tu trai sang phai
+      if (n <= 32) 
+      {
+         led32.ledx32 = (0xffffffff  >> n); 
+         led32_display();
+         delay_ms(100);
+         n++;
+      }
+      
+      else
+      {
+      n = 0;
+      trst++;
+      }
+
+}
+
+//Bat Tat tu trong ra
+void on_off_fi ()
+{
+      m = 0;
+      while (n < 2) 
+      {
+         //Bat tu trong ra
+         if (n <=16)
+         {
+            led32.ledx16[1] =~ (0xffff >> n);
+            led32.ledx16[0] =~ (0xffff << n);
+            led32_display();
+            delay_ms (100);
+            n++;
+         }
+         else
+         {
+            n=0;
+         }
+         
+         //Tat tu trong ra
+         if (n <= 16)
+         {
+            led32.ledx16[1] = (0xffff >> n);
+            led32.ledx16[0] = (0xffff << n);
+            led32_display();
+            delay_ms (100);
+            n++;
+         }  
+         else
+         {
+               n=0;
+         }
+         
+         m++;
+         trst++;
+      }
+}
+
+//Bat tat tu ngoai vao
+void on_off_fo ()
+{
+      n = 0;
+      while (n < 2) 
+      {
+         //Bat tu ngoai vao
+         if (m <=16)
+         {
+            led32.ledx16[1] =~ (0xffff << m);
+            led32.ledx16[0] =~ (0xffff >> m);
+            led32_display();
+            delay_ms (100);
+            m++;
+         }
+         else
+         {
+            m=0;
+         }
+         //Tat tu ngoai vao
+         if (m <=16)
+         {
+            led32.ledx16[1] = (0xffff << m);
+            led32.ledx16[0] = (0xffff >> m);
+            led32_display();
+            delay_ms (100);
+            m++;
+         }  
+         else
+         {
+            m=0;
+         }
+         n++;
+         trst++;
+       }
+
+}
+
+
+void main()
+{
+   system_init();  // Bien dich thanh cong - Go 2-3 chu dau - roi nhan Ctr + Khoang trang
+   while (true)
+   {
+         if (trst==0) led_flash ();
+         else if (trst==1) on_r2l();
+         else if (trst==2) off_r2l();
+         else if (trst==3) led_flash();
+         else if (trst==4) on_l2r();
+         else if (trst==5) off_l2r();
+         else if (trst==6) led_flash();
+         else if (trst==6) on_off_fo ();
+         else if (trst==6) led_flash();
+         else if (trst==6) on_off_fi ();
+   }
+}
+
+

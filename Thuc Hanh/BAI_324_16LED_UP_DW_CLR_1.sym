@@ -1,0 +1,142 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-007 delay
+008-00B led32
+00C-013 d7seg
+014-01B s7seg
+01C-01D inputcd.oldpin
+01E-01F inputcd.t
+020     inputcd.step
+021     n
+022     count
+023-026 @SPI_XFER_1_32.P1
+023-024 MAIN.state
+023-026 atan2.y
+025     s7seg_display.n
+025.0   CHECK_MODULE.tt
+025-026 inputcd.pin
+025     clear_all.@SCRATCH1
+025     on_PST.@SCRATCH1
+025     off_TSP.@SCRATCH1
+025     MAIN.@SCRATCH1
+026     CHECK_MODULE.n
+026     s7seg_display.@SCRATCH1
+027     @delay_ms1.P1
+027-028 delay_stop.t
+027     @WRITEBITA.P1
+027-02A atan2.x
+027     @READBITA.P1
+027     CHECK_MODULE.@SCRATCH1
+027     inputcd.@SCRATCH1
+028     @WRITEBITA.P1
+028-029 @READBITA.P2
+028     CHECK_MODULE.@SCRATCH2
+028     inputcd.@SCRATCH2
+029-02A delay_stop.tam
+029-02A @WRITEBITA.P1
+02B-02E @DIV3232.P1
+02B-02E atan2.z
+02B     delay_stop.@SCRATCH1
+02C     delay_stop.@SCRATCH2
+02F-032 @DIV3232.P1
+02F.0   atan2.sign
+030     atan2.quad
+033     @DIV3232.@SCRATCH1
+034     @DIV3232.@SCRATCH2
+035     @DIV3232.@SCRATCH3
+036     @DIV3232.@SCRATCH4
+037     @DIV3232.@SCRATCH5
+F71     CCP_5
+F71     CCP_5_LOW
+F72     CCP_5_HIGH
+F74     CCP_4
+F74     CCP_4_LOW
+F75     CCP_4_HIGH
+F83     PSP_DATA
+FA1.1   TIM3IF
+FB4.6   C1OUT
+FB4.7   C2OUT
+FB8     CCP_3
+FB8     CCP_3_LOW
+FB9     CCP_3_HIGH
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @delay_ms1
+00002E  CHECK_MODULE
+000088  led32_display
+0000BE  d7seg_display
+000124  s7seg_display
+000186  buzzer_off
+000192  triac_2_off
+00019E  system_init
+0001DC  @WRITEBITA
+00021A  @READBITA
+00024C  @DIV3232
+0002DA  delay_start
+00032C  delay_stop
+0003BE  inputcd
+00054C  @goto64102
+000574  on_PST
+0005BA  off_TSP
+000602  clear_all
+00061A  MAIN
+00061A  @cinit1
+00063E  @cinit2
+
+Project Directory:
+    C:\TTVXL\Thuc Hanh\
+
+Project Files:
+    BAI_324_16LED_UP_DW_CLR_1.c                             [10-May-26 18:38  CRC=3B89C254]
+    tv_boards.c                                             [26-Mar-23 12:28  CRC=E3A2BD05]
+    TV_MOPHONG.C                                            [13-Jan-23 10:01  CRC=BC0C87F3]
+    TV_MOPHONG.h                                            [25-Aug-22 14:03  CRC=D88B226F]
+    ..\..\Program Files (x86)\PICC\Devices\18f6722.h        [06-May-22 15:58  CRC=BC5DFD96]
+    ..\..\Program Files (x86)\PICC\Drivers\math.h           [05-May-20 13:57  CRC=02232397]
+    TV_LOWLEVER.C                                           [01-Mar-23 10:03  CRC=748DE935]
+    TV_LOWLEVER.H                                           [19-Nov-22 07:33  CRC=D872A938]
+
+Source signature=97B8868D
+Program memory checksum=0000
+Hex file CRC=89A0
+
+Units:
+    C:\TTVXL\Thuc Hanh\BAI_324_16LED_UP_DW_CLR_1 (main)
+
+Compiler Settings:
+    Processor:      PIC18F6722
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   BAI_324_16LED_UP_DW_CLR_1.xsym
+    Errors:      BAI_324_16LED_UP_DW_CLR_1.err
+    Ext Symbols: BAI_324_16LED_UP_DW_CLR_1.esym
+    INHX32:      BAI_324_16LED_UP_DW_CLR_1.hex
+    Symbols:     BAI_324_16LED_UP_DW_CLR_1.sym
+    List:        BAI_324_16LED_UP_DW_CLR_1.lst
+    Debug/COFF:  BAI_324_16LED_UP_DW_CLR_1.cof
+    Project:     BAI_324_16LED_UP_DW_CLR_1.ccspjt
+    Call Tree:   BAI_324_16LED_UP_DW_CLR_1.tre
+    Statistics:  BAI_324_16LED_UP_DW_CLR_1.STA

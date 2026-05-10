@@ -1,0 +1,44 @@
+[PROJECT]
+Target=BAI_311_STD_PST_32LED_NO_LOOP.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_311_STD_PST_32LED_NO_LOOP.c
+[BAI_311_STD_PST_32LED_NO_LOOP.c]
+Type=4
+[mru-list]
+1=BAI_311_STD_PST_32LED_NO_LOOP.c
+
+[defines]
+buildcount=7
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=8
+D1_L1=[47565]Stopped Editing.
+TotalEdit=8
+TotalDebug=0
+D1_E=8
+D1_D=0
+D1_L2=[47584]Project Closed.
+D1_L3=[48361]Project Opened.
+D1_L4=[48386]Started Editing.
+D1_L5=[48404]Stopped Editing.
+D1_L6=[48554]Started Editing.
+D1_L7=[48836]Stopped Editing.
+D1_L8=[48992]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=BAI_310_TONGHOP_32LED.c
+t1=93
+2=BAI_311_STD_PST_32LED_NO_LOOP.c
+t2=93
+Count=2
+[Units]
+Count=1
+1=BAI_311_STD_PST_32LED_NO_LOOP (main)

@@ -1,0 +1,36 @@
+[PROJECT]
+Target=BAI_321_ON_OFF_8LED.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_321_ON_OFF_8LED.c
+[BAI_321_ON_OFF_8LED.c]
+Type=4
+[mru-list]
+1=BAI_321_ON_OFF_8LED.c
+[Units]
+Count=1
+1=BAI_321_ON_OFF_8LED (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=2
+D1_L1=[49440]Stopped Editing.
+TotalEdit=4
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L2=[49515]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=BAI_321_ON_OFF_8LED.c
+t1=1
+Count=1

@@ -1,0 +1,40 @@
+[PROJECT]
+Target=BAI_307_STD_TSP_32LED.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_307_STD_TSP_32LED.c
+[BAI_307_STD_TSP_32LED.c]
+Type=4
+[mru-list]
+1=BAI_307_STD_TSP_32LED.c
+
+[defines]
+buildcount=4
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=6
+D1_L1=[36512]Stopped Editing.
+TotalEdit=4
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L2=[36518]Started Editing.
+D1_L3=[36551]Stopped Editing.
+D1_L4=[36586]Started Editing.
+D1_L5=[36597]Stopped Editing.
+D1_L6=[36719]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=BAI_307_STD_TSP_32LED.c
+t1=1
+Count=1
+[Units]
+Count=1
+1=BAI_307_STD_TSP_32LED (main)

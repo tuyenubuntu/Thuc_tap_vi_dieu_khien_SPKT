@@ -1,0 +1,28 @@
+//!#define   board    D501     // Co dong nay thi chay that. Bo dong nay thi mo phong
+#include<tv_boards.c>
+unsigned int8 n;
+void main()
+{
+      system_init();  // Bien dich thanh cong - Go 2-3 chu dau - roi nhan Ctr + Khoang trang
+      while(true)
+      {
+               for (n= 0; n <= 16 ; n++)
+               {
+                     led32.ledx16[1] = ~(0xffff >> n);
+                     led32.ledx16[0] = (int16) 1 << n; // Sang dich dan tu phai sang trai, theo kieu di chuyen LED.
+                     // Bat dau tu con dau tien trong chuoi
+                     led32_display();
+                     delay_ms(200);
+                     
+               }
+               for (n = 0; n <=16 ; n++)
+               {
+                     led32.ledx16[1] =~ (0xffff >> n); // Do thu tu tat nguoc nen can dao =~
+                     led32.ledx16[0] = (0x8000 << n); // Sang dich dan tu phai sang trai, theo kieu di chuyen LED.
+                     // Bat dau tu con dau tien trong chuoi
+                     led32_display();
+                     delay_ms(200);
+               }
+
+      }
+}

@@ -1,0 +1,49 @@
+[PROJECT]
+Target=BAI_313_TONGHOP_32LED.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_313_TONGHOP_32LED.c
+[BAI_313_TONGHOP_32LED.c]
+Type=4
+[mru-list]
+1=BAI_313_TONGHOP_32LED.c
+
+[defines]
+buildcount=8
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=5
+D1_L1=[68846]Stopped Editing.
+TotalEdit=6
+TotalDebug=0
+D1_E=6
+D1_D=0
+D1_L2=[68955]Started Editing.
+D1_L3=[69262]Stopped Editing.
+D1_L4=[69734]Started Editing.
+D1_L5=[71047]Stopped Editing.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=BAI_313_TONGHOP_32LED.c
+t1=1
+2=BAI_310_TONGHOP_32LED.c
+t2=77
+Count=2
+3=..\..\Program Files (x86)\PICC\Devices\18f6722.h
+t3=77
+4=..\..\Program Files (x86)\PICC\Drivers\math.h
+t4=1
+5=TV_LOWLEVER.C
+t5=1
+6=TV_LOWLEVER.H
+t6=1
+[Units]
+Count=1
+1=BAI_313_TONGHOP_32LED (main)

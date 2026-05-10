@@ -1,0 +1,47 @@
+[PROJECT]
+Target=BAI_305_STD_PST_16LED_CHOPTAT_8LED.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_305_STD_PST_16LED_CHOPTAT_8LED.c
+[BAI_305_STD_PST_16LED_CHOPTAT_8LED.c]
+Type=4
+[mru-list]
+1=BAI_305_STD_PST_16LED_CHOPTAT_8LED.c
+
+[defines]
+buildcount=6
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=11
+D1_L1=[34960]Stopped Editing.
+TotalEdit=5
+TotalDebug=0
+D1_E=5
+D1_D=0
+D1_L2=[35001]Started Editing.
+D1_L3=[35010]Stopped Editing.
+D1_L4=[35088]Started Editing.
+D1_L5=[35106]Stopped Editing.
+D1_L6=[35215]Started Editing.
+D1_L7=[35225]Stopped Editing.
+D1_L8=[35342]Started Editing.
+D1_L9=[35482]Project Closed.
+D1_L10=[36077]Project Opened.
+D1_L11=[36102]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=BAI_306_STD_TSP_16LED_2NHOM.c
+t1=1
+Count=1
+2=BAI_305_STD_PST_16LED_CHOPTAT_8LED.c
+t2=1
+[Units]
+Count=1
+1=BAI_305_STD_PST_16LED_CHOPTAT_8LED (main)

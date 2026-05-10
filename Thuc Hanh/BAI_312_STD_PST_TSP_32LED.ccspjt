@@ -1,0 +1,38 @@
+[PROJECT]
+Target=BAI_312_STD_PST_TSP_32LED.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_312_STD_PST_TSP_32LED.c
+[BAI_312_STD_PST_TSP_32LED.c]
+Type=4
+[mru-list]
+1=BAI_312_STD_PST_TSP_32LED.c
+[Units]
+Count=1
+1=BAI_312_STD_PST_TSP_32LED (main)
+
+[defines]
+buildcount=1
+
+[Opened Files]
+1=BAI_310_TONGHOP_32LED.c
+t1=93
+2=BAI_312_STD_PST_TSP_32LED.c
+t2=93
+Count=2
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=2
+D1_L1=[49114]Stopped Editing.
+TotalEdit=2
+TotalDebug=0
+D1_E=2
+D1_D=0
+D1_L2=[49181]Project Closed.
+
+[fileformats]
+forcecoff=0

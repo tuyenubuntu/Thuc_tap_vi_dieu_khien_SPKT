@@ -1,0 +1,55 @@
+//!#define   board    D501     // Co dong nay thi chay that. Bo dong nay thi mo phong
+#include<tv_boards.c>
+unsigned int8 n=0, hu=0, count_down = 0, count_up = 0;
+
+void clear_all ()
+{
+   while (true)
+   {
+   if (input (CLR) == 0) led32.ledx16[0] = 0;
+   }
+}
+
+void on_PST ()
+{
+   while (count_up <=16)
+   {
+      if(inputcd (UP) == 0)
+      {
+         led32.ledx16[0] =~ (0xffff  << count_up); 
+         led32_display();
+         delay_ms(100);
+         count_up ++;
+      }
+   }
+   count_up = 0; hu++;
+}
+
+void off_TSP ()
+{  
+   while (count_down <=16)
+   {
+      if(inputcd (DW) == 0)
+      {
+         led32.ledx16[0] = (0xffff  >> count_down); 
+         led32_display();
+         delay_ms(100);
+         count_down++;
+      }
+   }
+   count_down = 0; hu++;
+}
+
+void main()
+{
+      system_init();  // Bien dich thanh cong - Go 2-3 chu dau - roi nhan Ctr + Khoang trang
+      led32.ledx16[0] = 0;
+      while (true)
+      {
+         if (ht == 0) on_PST ();
+         else if (ht == 1) off_TSP ();
+         else clear_all ();
+      }
+}
+
+

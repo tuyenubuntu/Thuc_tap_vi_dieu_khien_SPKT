@@ -1,0 +1,49 @@
+[PROJECT]
+Target=BAI_306_STD_TSP_16LED_2NHOM.hex
+Processor_Text=PIC18F6722
+CCSVersion=5.109
+Compiler=PCH
+[Target Data]
+FileList=BAI_306_STD_TSP_16LED_2NHOM.c
+[BAI_306_STD_TSP_16LED_2NHOM.c]
+Type=4
+[mru-list]
+1=BAI_306_STD_TSP_16LED_2NHOM.c
+
+[defines]
+buildcount=7
+
+[ProjectLog]
+Days=1
+D1=10-05-2026
+D1_L=13
+D1_L1=[35871]Stopped Editing.
+TotalEdit=8
+TotalDebug=0
+D1_E=8
+D1_D=0
+D1_L2=[35947]Started Editing.
+D1_L3=[36051]Stopped Editing.
+D1_L4=[36068]Started Editing.
+D1_L5=[36077]Stopped Editing.
+D1_L6=[36077]Project Closed.
+D1_L7=[36102]Project Opened.
+D1_L8=[36221]Started Editing.
+D1_L9=[36236]Stopped Editing.
+D1_L10=[36253]Started Editing.
+D1_L11=[36372]Stopped Editing.
+D1_L12=[36412]Started Editing.
+D1_L13=[36442]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=BAI_306_STD_TSP_16LED_2NHOM.c
+t1=1
+Count=1
+2=BAI_305_STD_PST_16LED_CHOPTAT_8LED.c
+t2=1
+[Units]
+Count=1
+1=BAI_306_STD_TSP_16LED_2NHOM (main)
