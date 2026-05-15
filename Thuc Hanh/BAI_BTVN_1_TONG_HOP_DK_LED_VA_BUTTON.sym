@@ -1,0 +1,167 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-007 delay
+008-00B led32
+00C-013 d7seg
+014-01B s7seg
+01C-01D inputcd.oldpin
+01E-01F inputcd.t
+020     inputcd.step
+021     n
+022     count
+023     m
+024.0   mode
+024.1   full
+025     MAIN.ind0
+025-028 atan2.y
+025-028 @SPI_XFER_1_32.P1
+026     MAIN.ind1
+027     MAIN.ind2
+028     MAIN.ind3
+029     s7seg_display.n
+029-02C atan2.x
+029.0   CHECK_MODULE.tt
+029-02A inputcd.pin
+029     flash_led.times
+029     on_ledx8_in_out.in0
+029     on_PST.@SCRATCH1
+029     off_TSP.@SCRATCH1
+029     mode_loading.@SCRATCH1
+029     MAIN.@SCRATCH1
+02A     CHECK_MODULE.n
+02A     on_ledx8_in_out.in1
+02A     s7seg_display.@SCRATCH1
+02A     on_PST.@SCRATCH2
+02A     off_TSP.@SCRATCH2
+02A     mode_loading.@SCRATCH2
+02B     on_ledx8_in_out.out0
+02B     @WRITEBITA.P1
+02B-02C delay_stop.t
+02B     @READBITA.P1
+02B     CHECK_MODULE.@SCRATCH1
+02B     inputcd.@SCRATCH1
+02B     mode_loading.@SCRATCH3
+02C-02D @READBITA.P1
+02C     on_ledx8_in_out.out1
+02C     @WRITEBITA.P1
+02C     CHECK_MODULE.@SCRATCH2
+02C     inputcd.@SCRATCH2
+02C     mode_loading.@SCRATCH4
+02D-02E delay_stop.tam
+02D-030 atan2.z
+02D-02E @WRITEBITA.P1
+02D     @delay_ms1.P2
+02D     on_ledx8_in_out.@SCRATCH1
+02D     mode_loading.@SCRATCH5
+02E     on_ledx8_in_out.@SCRATCH2
+02E     mode_loading.@SCRATCH6
+02F-032 @DIV3232.P1
+02F     delay_stop.@SCRATCH1
+030     delay_stop.@SCRATCH2
+031.0   atan2.sign
+032     atan2.quad
+033-036 @DIV3232.P1
+037     @DIV3232.@SCRATCH1
+038     @DIV3232.@SCRATCH2
+039     @DIV3232.@SCRATCH3
+03A     @DIV3232.@SCRATCH4
+03B     @DIV3232.@SCRATCH5
+F71     CCP_5
+F71     CCP_5_LOW
+F72     CCP_5_HIGH
+F74     CCP_4_LOW
+F74     CCP_4
+F75     CCP_4_HIGH
+F83     PSP_DATA
+FA1.1   TIM3IF
+FB4.6   C1OUT
+FB4.7   C2OUT
+FB8     CCP_3
+FB8     CCP_3_LOW
+FB9     CCP_3_HIGH
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @delay_ms1
+00002E  CHECK_MODULE
+000088  led32_display
+0000BE  d7seg_display
+000124  s7seg_display
+000186  buzzer_off
+000192  triac_2_off
+00019E  system_init
+0001DC  flash_led
+0001FA  @WRITEBITA
+000238  @READBITA
+00026A  @DIV3232
+0002F8  delay_start
+00034A  delay_stop
+0003DC  inputcd
+00056A  @goto14199
+000592  on_PST
+00062E  off_TSP
+0006C0  on16_in2out
+000718  on16_out2in
+000770  on_ledx8_in_out
+000818  mode_loading
+000940  MAIN
+000940  @cinit1
+00096A  @cinit2
+
+Project Directory:
+    C:\Users\WORKSTATION\Documents\Thuc_tap_vi_dieu_khien_SPKT\Thuc Hanh\
+
+Project Files:
+    BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.c                  [15-May-26 22:38  CRC=E4597CCA]
+    tv_boards.c                                             [11-May-26 23:06  CRC=E3A2BD05]
+    TV_MOPHONG.C                                            [11-May-26 23:06  CRC=BC0C87F3]
+    TV_MOPHONG.h                                            [11-May-26 23:06  CRC=D88B226F]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\18f6722.h [06-May-22 15:58  CRC=BC5DFD96]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\math.h  [05-May-20 13:57  CRC=02232397]
+    TV_LOWLEVER.C                                           [11-May-26 23:06  CRC=748DE935]
+    TV_LOWLEVER.H                                           [11-May-26 23:06  CRC=D872A938]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdbool.h [17-Apr-19 13:48  CRC=969707C0]
+
+Source signature=9543A74B
+Program memory checksum=0000
+Hex file CRC=9F5C
+
+Units:
+    C:\Users\WORKSTATION\Documents\Thuc_tap_vi_dieu_khien_SPKT\Thuc Hanh\BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON (main)
+
+Compiler Settings:
+    Processor:      PIC18F6722
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.xsym
+    Errors:      BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.err
+    Ext Symbols: BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.esym
+    INHX32:      BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.hex
+    Symbols:     BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.sym
+    List:        BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.lst
+    Debug/COFF:  BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.cof
+    Project:     BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.ccspjt
+    Call Tree:   BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.tre
+    Statistics:  BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.STA

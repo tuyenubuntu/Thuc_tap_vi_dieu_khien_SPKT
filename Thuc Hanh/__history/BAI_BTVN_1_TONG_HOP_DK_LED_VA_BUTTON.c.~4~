@@ -1,0 +1,165 @@
+//!#define   board    D501     // Co dong nay thi chay that. Bo dong nay thi mo phong
+#include<tv_boards.c>
+#include <stdbool.h>
+unsigned int8 n=0, count = 0;
+// Tao bien che do dieu khien KED va bien bao da full LED
+// mode == false thi la manua, mode == true la auto chay LED voi 1 lan nhan
+// Bien full de bao trang thai 16 LED dau tien
+bool mode = false, full = false; 
+
+void modes()
+{
+   if (inputcd (CLR) == 0) //Neu nhan CLR
+   // Nhat CLR la clear het den voi tra cac gia tri ve mac dinh
+   {
+      led32.ledx16[0] = 0; //Tat het LED
+      led32_display();
+      count = 0; full = false; // Tra ve gia tri mac dinh
+      
+      //Doi them 1s, neu du dieu kien thi qua che do moi
+      delay_ms(1000); 
+      if (inputcd (CLR) == 0) //Sau 1s ma van con nhan
+      {
+         mode = ~mode; //Thi chuyen sang che do khac (nguoc lai so voi hien tai)
+         // Neu mode = true thi chuyen sang che do auto chay LED
+         if (mode==1) //Neu mode == true thi nhap nhay 5 lan, de bao kich hoat che do auto
+         {
+            for (n =0 ; n <10; n++)
+            {
+               led32.ledx16[0] = ~led32.ledx16[0];
+               led32_display();
+               delay_ms (500);
+            }
+         }
+         // Neu van la false thi van o che do manual, thi sang lien tuc 3s
+         else
+         {
+               led32.ledx16[0] = 0xffff;
+               led32_display();
+               delay_ms (300);
+               led32.ledx16[0] = 0;
+               led32_display();
+         }
+      }
+      //Neu sau 1s ma khong con nhan thi coi nhu khong doi che do, van la che do cu
+      else  mode = mode;
+   }
+}
+
+//Function dung de bat LED tu phai sang trai, co ho cho 2 che do
+void on_PST ()
+{
+      //Bat tung LED moi lan nhan
+      if((inputcd (UP) == 0) && mode==false)
+      {
+         led32.ledx16[0] = ~(0xffff  << count);
+         led32_display();
+         delay_ms(100);
+         count ++;
+         if (count == 16)
+         {
+            count = 16;
+         }
+      }
+      //Bat lien tiep cac LED chi 1 lan nhan
+      if((inputcd (UP) == 0) && mode==true && full==false)
+      {
+         for (n = 0; n <=16; n++)
+         {
+            led32.ledx16[0] = ~(0xffff  << n);
+            led32_display();
+            delay_ms(100);
+            if (n==16)
+            {
+               full = true;
+            }
+         }
+      }
+}
+
+//Function dung de tat LED tu phai sang trai, co ho cho 2 che do
+void off_TSP ()
+{  
+      //Che do tat tung LED cho moi lan nhan
+      if((inputcd (DW) == 0) && count > 0 && mode==false)
+      {
+         count = count - 1;
+         led32.ledx16[0] = ~(0xffff << (count));
+         led32_display();
+         delay_ms(100);
+         if (count == 0)
+         {
+            count = 0;
+         }
+      }
+      
+      //Tat lien tiep chi 1 lan nhan
+      if((inputcd (DW) == 0) && mode==true && full==true)
+      {
+         for (n = 0; n <=16; n++)
+         {
+            led32.ledx16[0] = (0xffff >> n);
+            led32_display();
+            delay_ms(100);
+            if (n==16)
+            {
+               full = false;
+            }
+         }
+      }
+}
+
+
+//Flash function
+void flash_led ()
+{
+   for (n = 0; n < 10; n++)
+   {
+      led32.ledx32 = ~led32.ledx32;
+      led32_display();
+      delay_ms(100);
+   }
+}
+
+
+//on led from in to out
+void on_in2out ()
+{
+   for (n = 0; n<= 16 ;n++ )
+   {
+      led32.ledx16[1] = ~(0xffff << n);
+      led32.ledx16[0] = ~(0xffff >> n);
+      led32_display();
+      delay_ms(100);
+   }
+}
+
+//on led from out to in
+void on_out2in ()
+{
+   for (n = 0; n<= 16 ;n++ )
+   {
+      led32.ledx16[1] = ~(0xffff >> n);
+      led32.ledx16[0] = ~(0xffff << n);
+      led32_display();
+      delay_ms(100);
+   }
+}
+
+void main ()
+{
+      system_init();  // Bien dich thanh cong - Go 2-3 chu dau - roi nhan Ctr + Khoang trang
+      led32.ledx16[0] = 0;
+      while (true)
+      {
+         if (0 <= count <=16) 
+         {
+//!            on_PST (); //Function dung de bat LED tu phai sang trai, co ho cho 2 che do
+//!            off_TSP (); //Function dung de tat LED tu phai sang trai, co ho cho 2 che do
+//!            modes (); //Lua chon che do
+               on_in2out ();
+          }
+      }
+}
+
+

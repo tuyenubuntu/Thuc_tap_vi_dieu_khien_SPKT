@@ -1,0 +1,74 @@
+
+ROM used:   2580/131072 (2%)
+            2580/131072 (2%) including unused fragments
+
+            0.7 Average locations per line
+            4.3 Average locations per statement
+
+RAM used:   42/3936 (1%) at main() level
+            60/3936 (2%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  233   130  22  BAI_BTVN_1_TONG_HOP_DK_LED_VA_BUTTON.c
+   32     0   0  tv_boards.c
+  137   121  20  TV_MOPHONG.C
+  104     0   0  TV_MOPHONG.h
+  953     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\18f6722.h
+ 2228   258  43  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\math.h
+  180    86  14  TV_LOWLEVER.C
+    7     0   0  TV_LOWLEVER.H
+   39     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdbool.h
+----- -----
+ 3913   595 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     42   1    1             @delay_ms1
+0     54   1    0    221  2.6  led32_display
+0    102   2    0    452  2.8  d7seg_display
+0     98   2    2    301  5.1  s7seg_display
+0     12   0    0     30  1.0  buzzer_off
+0     12   0    0     30  1.0  triac_2_off
+0     62   1    0    394  3.2  system_init
+0     90   2    4    457  6.6  CHECK_MODULE
+0     82   2    0    153  3.9  delay_start
+0    142   3   13             @DIV3232
+0    146   3    6    318  6.3  delay_stop
+0    398   8    4   1166  7.6  inputcd
+0     62   1    6             @WRITEBITA
+0     50   1    5             @READBITA
+0     40   1    0             @goto14199
+0    156   3    2    621  6.7  on_PST
+0    146   3    2    681  8.1  off_TSP
+0     30   1    1    153  3.9  flash_led
+0     88   2    0    230  5.4  on16_in2out
+0     88   2    0    230  5.4  on16_out2in
+0    168   3    6    452  6.7  on_ledx8_in_out
+0    296   6    6    601  6.7  mode_loading
+0    212   4    5    618  4.8  MAIN
+ Inline         0    223  4.5  @cinit1
+
+Program metrics:
+    Functions               19
+    Statements              595
+    Comments                492
+    Volume (V)              12571
+    Difficulty (D)          93.1
+    Effort to implement (E) 1170858
+    Time to implement (T)   18 hours, 4 minutes
+    Est Delivered Bugs (B)  4
+    Cyclomatic Complexity   38
+    Maintainability (MI)    131
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-0FFFE  2576  62956  
+10000-1FFFE     0  65536  
+
+
+
